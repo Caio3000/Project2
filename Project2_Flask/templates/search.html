@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Book Review</title>
+  </head>
+  <body>
+    <h1>Book API</h1>
+    <p>This form will allow you to choose a date and book type and will return the books on the best sellers list for the specified month and list name. </p>
+    <form action="" method="POST" name="sample">
+      <div class="banner"></div>
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+
+        <p>
+          First Name:
+          {{ form.first_name() }}
+        </p>
+
+        <p>
+          Date: (2020)
+        </p>
+
+        <p>
+          {{ form.date() }}
+        </p>
+
+        <p>
+          Book Type:
+          {{ form.list_name }}
+
+        </p>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+  </body>
+</html>
